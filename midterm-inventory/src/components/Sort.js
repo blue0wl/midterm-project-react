@@ -31,7 +31,7 @@ function Sort({ inventory }) {
         <option value="ascending">Ascending</option>
         <option value="descending">Descending</option>
       </select>
-      <table class="table table-dark table-striped text-center">
+      <table className="table table-dark table-striped text-center">
         <thead>
           <tr>
             <th>ID</th>

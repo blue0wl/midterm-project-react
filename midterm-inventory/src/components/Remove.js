@@ -26,11 +26,11 @@ function Remove({ removeItem, inventory }) {
       <h3>Remove Item</h3>
       <form onSubmit={handleSubmit}>
       <label id="formGroupExampleInput" className="form-label">Enter Item ID</label>
-      <input type="text" className="form-control" id="formGroupExampleInput" value={id} onChange={(e) => setId(e.target.value)} placeholder="Remove item by ID..." required />
+      <input type="text" className="form-control" id="formGroupExampleInput" value={id} onChange={(e) => setId(e.target.value.trim())} placeholder="Remove item by ID..." required />
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <button type="submit" className="btn btn-danger">Remove Item</button>
       </form>
-      {removed && <p style={{ color: 'lightgreen' }}>{removed}</p>}
+      {removed && <p style={{ color: 'green' }}>{removed}</p>}
     </div>
     </div>
     </div>

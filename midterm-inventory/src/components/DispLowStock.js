@@ -9,7 +9,7 @@ function DispLowStock({ inventory }) {
   <div className="curved-rectangle">
   <div className="col-sm-10">
       <h3>Display Low Stock Items</h3>
-      <table class="table table-dark table-striped text-center">
+      <table className="table table-dark table-striped text-center">
         <thead>
           <tr>
             <th>ID</th>

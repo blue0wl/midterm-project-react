@@ -87,7 +87,7 @@ function Add({ addItem, inventory }) {
         {quantityError && <p style={{ color: 'red' }}>{quantityError}</p>}
         
         <label id="formGroupExampleInput" className="form-label">Enter Item Price</label>
-        <input type="number" className="form-control" id="formGroupExampleInput" value={price} onChange={handlePriceChange} placeholder="Price" required />
+        <input type="number" className="form-control" id="formGroupExampleInput" value={price.trim()} onChange={handlePriceChange} placeholder="Price" required />
         {priceError && <p style={{ color: 'red' }}>{priceError}</p>}
         
         <select className="form-select" value={category} onChange={(e) => setCategory(e.target.value)} required>
@@ -96,7 +96,7 @@ function Add({ addItem, inventory }) {
           <option value="Electronics">Electronics</option>
           <option value="Entertainment">Entertainment</option>
         </select>
-        {notif && <p style={{ color: 'maroon' }}>{notif}</p>}
+        {notif && <p style={{ color: 'red' }}>{notif}</p>}
         
         <button type="submit" className="btn btn-success">Add Item</button>
       </form>
