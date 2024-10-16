@@ -53,7 +53,7 @@ function Update({ updateItem, inventory }) {
       <h3>Update Item</h3>
       <form onSubmit={handleSubmit}>
         <label id="formGroupExampleInput" className="form-label">Enter Item ID</label>
-        <input type="text" className="form-control" id="formGroupExampleInput" value={id} onChange={(e) => setId(e.target.value)} placeholder="Enter item ID" required />
+        <input type="text" className="form-control" id="formGroupExampleInput" value={id} onChange={(e) => setId(e.target.value.trim())} placeholder="Enter item ID" required />
         {error && <p style={{ color: 'red' }}>{error}</p>}
 
         <select className="form-select" value={field} onChange={(e) => setField(e.target.value)} required>
@@ -68,7 +68,7 @@ function Update({ updateItem, inventory }) {
 
         <button type="submit" className="btn btn-primary">Update Item</button>
       </form>
-      {update && <p style={{ color: 'lightgreen' }}>{update}</p>}
+      {update && <p style={{ color: 'green' }}>{update}</p>}
     </div>
     </div>
     </div>

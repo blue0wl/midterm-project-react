@@ -26,12 +26,12 @@ function Search({ inventory }) {
       <h3>Search Item</h3>
       <form onSubmit={handleSubmit}>
       <label id="formGroupExampleInput" className="form-label">Enter Item ID</label>
-      <input type="text" className="form-control" value={id} onChange={(e) => setId(e.target.value)} placeholder="Search item by ID..." required />
+      <input type="text" className="form-control" value={id} onChange={(e) => setId(e.target.value.trim())} placeholder="Search item by ID..." required />
       {error && <p style={{ color: 'red' }}>{error}</p>}
       <button type="submit" class="btn btn-info">Search Item</button>
       </form>
       {foundItem && (
-        <table class="table table-dark table-striped text-center">
+        <table className="table table-dark table-striped text-center">
             <thead>
             <tr>
             <th>ID</th>

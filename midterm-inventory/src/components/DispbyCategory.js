@@ -18,7 +18,7 @@ function DispbyCategory({ inventory }) {
         <option value="Electronics">Electronics</option>
         <option value="Entertainment">Entertainment</option>
       </select>
-      <table class="table table-dark table-striped text-center">
+      <table className="table table-dark table-striped text-center">
         <thead>
           <tr>
             <th>ID</th>
